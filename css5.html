@@ -1,0 +1,64 @@
+w<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Selectors Example</title>
+  <style>
+    /* 1️⃣ Universal Selector */
+    * {
+      margin: 5px;
+      padding: 5px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* 2️⃣ Type / Element Selector */
+    h1 {
+      color: blue;
+    }
+
+    p {
+      color: brown;
+    }
+
+    /* 3️⃣ Class Selector */
+    .box {
+      border: 2px solid black;
+      background-color: lightyellow;
+    }
+
+    /* 4️⃣ Descendant Selector */
+    .box p {
+      color: green;
+      font-weight: bold;
+    }
+
+    /* 5️⃣ ID Selector */
+    #header {
+      background-color: lightgray;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* 6️⃣ Group Selector */
+    h1, p {
+      font-style: italic;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div id="header">
+    <h1>This is Header (ID Selector)</h1>
+    <p>Paragraph inside header</p>
+  </div>
+
+  <div class="box">
+    <p>This is inside a box (Class + Descendant Selector).</p>
+  </div>
+
+  <div class="box">
+    <p>Another box with the same class.</p>
+  </div>
+  <p>This is outside box (Only Element Selector).</p>
+</body>
+</html>

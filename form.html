@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Types Example</title>
+</head>
+<body>
+    <h2>Student Button Example</h2>
+
+    <!-- Normal button -->
+    <button type="button" onclick="sayHello()">Say Hello</button>
+
+    <!-- Submit button -->
+    <form id="myForm">
+        <input type="text" placeholder="Type something" name="inputText">
+        <button type="submit" onclick="submitForm(event)">Submit Form</button>
+    </form>
+
+    <!-- Reset button -->
+    <button type="reset" onclick="resetMessage()">Reset Form</button>
+
+    <p id="message"></p>
+
+    <script>
+        // Normal button function
+        function sayHello() {
+            document.getElementById("message").innerText = "Hello Student! You clicked the button.";
+        }
+
+        // Submit button function
+        function submitForm(event) {
+            event.preventDefault(); // form submit rokta hai
+            document.getElementById("message").innerText = "Form Submitted Successfully!";
+        }
+
+        // Reset button function
+        function resetMessage() {
+            document.getElementById("message").innerText = "";
+        }
+    </script>
+</body>
+</html>

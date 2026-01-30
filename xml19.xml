@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+
+    <book category="Fiction">
+        <title>The Great Gatsby</title>
+        <author>F. Scott Fitzgerald</author>
+        <year>1925</year>
+        <price>10.99</price>
+    </book>
+
+    <book category="Science">
+        <title>A Brief History of Time</title>
+        <author>Stephen Hawking</author>
+        <year>1988</year>
+        <price>15.50</price>
+    </book>
+
+    <book category="Technology">
+        <title>Clean Code</title>
+        <author>Robert C. Martin</author>
+        <year>2008</year>
+        <price>30.00</price>
+    </book>
+
+    <book category="History">
+        <title>Guns, Germs, and Steel</title>
+        <author>Jared Diamond</author>
+        <year>1997</year>
+        <price>18.00</price>
+    </book>
+
+</library>

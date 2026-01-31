@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real Time Calculator</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #e6e6e6;
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator {
+            background: #1c1c1c;
+            padding: 20px;
+            border-radius: 15px;
+            width: 260px;
+        }
+
+        .display {
+            background: black;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: right;
+            margin-bottom: 15px;
+        }
+
+        .expression {
+            font-size: 14px;
+            color: #bbb;
+            min-height: 20px;
+        }
+
+        .result {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            height: 55px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .number { background: #505050; color: white; }
+        .operator { background: rgb(72, 17, 130); color: white; }
+        .clear {
+            background: rgb(125, 73, 43);
+            color: white;
+            grid-column: span 2;
+        }
+        .equal {
+            background: green;
+            color: rgb(122, 118, 118);
+            grid-column: span 2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="calculator">
+
+    <div class="display">
+        <div class="expression" id="expression"></div>
+        <div class="result" id="result">0</div>
+    </div>
+
+    <div class="buttons">
+        <button class="clear" onclick="clearAll()">C</button>
+        <button class="operator" onclick="add('/')">÷</button>
+        <button class="operator" onclick="add('*')">×</button>
+
+        <button class="number" onclick="add('7')">7</button>
+        <button class="number" onclick="add('8')">8</button>
+        <button class="number" onclick="add('9')">9</button>
+        <button class="operator" onclick="add('-')">−</button>
+
+        <button class="number" onclick="add('4')">4</button>
+        <button class="number" onclick="add('5')">5</button>
+        <button class="number" onclick="add('6')">6</button>
+        <button class="operator" onclick="add('+')">+</button>
+
+        <button class="number" onclick="add('1')">1</button>
+        <button class="number" onclick="add('2')">2</button>
+        <button class="number" onclick="add('3')">3</button>
+        <button class="equal" onclick="finalResult()">=</button>
+
+        <button class="number" onclick="add('0')">0</button>
+        <button class="number" onclick="add('.')">.</button>
+    </div>
+
+</div>
+
+<script>
+    let exp = "";
+
+    function add(value) {
+        exp += value;
+        document.getElementById("expression").innerText = exp;
+
+        try {
+            document.getElementById("result").innerText = eval(exp);
+        } catch {
+            document.getElementById("result").innerText = "0";
+        }
+    }
+
+    function clearAll() {
+        exp = "";
+        document.getElementById("expression").innerText = "";
+        document.getElementById("result").innerText = "0";
+    }
+
+    function finalResult() {
+        try {
+            exp = eval(exp).toString();
+            document.getElementById("expression").innerText = "";
+            document.getElementById("result").innerText = exp;
+        } catch {
+            document.getElementById("result").innerText = "Error";
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+console.log([1, 2, 3].reduce((a, b) => a + b));//adds numbers in the array, together using the reduce mehtod

@@ -28,4 +28,5 @@ if (isset($_POST['submit'])) {
 
     echo "Student added successfully";
 }
+
 ?>

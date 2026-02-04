@@ -1,0 +1,2 @@
+Hello! This is a sample file.
+File handling in PHP is easy.
